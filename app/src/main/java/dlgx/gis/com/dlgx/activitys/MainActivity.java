@@ -35,8 +35,8 @@ import com.esri.core.symbol.SimpleMarkerSymbol;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import dlgx.gis.com.dlgx.R;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -75,8 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // The current map extent, use to set the extent of the map after switching basemaps.
     private Polygon mCurrentMapExtent = null;
     private GraphicsLayer graLyr = null;
-    private String tiledUrl = "http://222.188.115" +
-            ".94:6080/arcgis/rest/services/yxt20160727/MapServer";
+    private String tiledUrl = "http://222.188.115.94:6080/arcgis/rest/services/yxt20160727/MapServer";
     private ArcGISTiledMapServiceLayer tiledMapServiceLayer = null;
     private ImageView mImageView;
 

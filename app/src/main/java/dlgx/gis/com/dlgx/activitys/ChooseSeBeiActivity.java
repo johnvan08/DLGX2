@@ -3,7 +3,7 @@ package dlgx.gis.com.dlgx.activitys;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Point;
+
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -23,6 +23,7 @@ import com.esri.android.map.MapView;
 import com.esri.android.map.event.OnSingleTapListener;
 import com.esri.android.map.event.OnStatusChangedListener;
 import com.esri.core.geometry.GeometryEngine;
+import com.esri.core.geometry.Point;
 import com.esri.core.geometry.Polyline;
 import com.esri.core.geometry.SpatialReference;
 import com.esri.core.map.Graphic;
@@ -31,8 +32,10 @@ import com.esri.core.symbol.PictureMarkerSymbol;
 import com.esri.core.symbol.SimpleMarkerSymbol;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -108,25 +111,8 @@ public class ChooseSeBeiActivity extends Activity implements View.OnClickListene
         setContentView(R.layout.choosesebeiactivity_layout);
         ButterKnife.bind(this);
         //dianlantongdaoBeen = DatabaseAdapter.getIntance(getBaseContext()).querytongdaoAddress();
-        //
-       fenZhiXiangBeen= DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress( Constant.EQUIPMEN_FENZHIXIANG+"");
-        //
-        huanWangGuiBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_HUANWANGGUI+"");
-        //
-        xaingBianBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_XIANGBIAN+"");
-        //
-        peiDinshiBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_PEIDIANSHI+"");
-        //
-        bianYaQiBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_BIANYAQI+"");
-        //
-        ganTaBeen =DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_GANTA+"");
-        //
-        bianDianZhanBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_BIANDIANZHAN+"");
-        //
-        kaiGuanZhanBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_KAIGUANZHAN+"");
 
-        yanMaiJingBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_YANMAIJING+"");
-
+        getAllMarker();
         mapView.setEsriLogoVisible(true);
         mapView.enableWrapAround(true);
         graLyr = new GraphicsLayer();
@@ -205,7 +191,13 @@ public class ChooseSeBeiActivity extends Activity implements View.OnClickListene
                 callout.hide();
                 TextView tv = new TextView(ChooseSeBeiActivity.this);
                 tv.setText("这是一个气泡");
-
+                tv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        //调到拨号界面
+                        Toast.makeText(ChooseSeBeiActivity.this,"tanchujiemian", Toast.LENGTH_LONG).show();
+                    }
+                });
                 int[] graphicIDs = graLyr.getGraphicIDs(x, y, 1);
                 if (graphicIDs != null && graphicIDs.length > 0) {
                     Graphic gr = graLyr.getGraphic(graphicIDs[0]);
@@ -448,6 +440,49 @@ public class ChooseSeBeiActivity extends Activity implements View.OnClickListene
         back.setOnClickListener(this);
     }
 
+    ///获取
+    private void getAllMarker(){
+        //
+        fenZhiXiangBeen= DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress( Constant.EQUIPMEN_FENZHIXIANG+"");
+        //
+        huanWangGuiBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_HUANWANGGUI+"");
+        //
+        xaingBianBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_XIANGBIAN+"");
+        //
+        peiDinshiBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_PEIDIANSHI+"");
+        //
+        bianYaQiBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_BIANYAQI+"");
+        //
+        ganTaBeen =DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_GANTA+"");
+        //
+        bianDianZhanBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_BIANDIANZHAN+"");
+        //
+        kaiGuanZhanBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_KAIGUANZHAN+"");
+        //
+        yanMaiJingBeen = DatabaseAdapter.getIntance(getBaseContext()).querySheBeiAddress(Constant.EQUIPMEN_YANMAIJING+"");
+    }
+
+    /**
+     * 添加覆盖物的方法
+     */
+    private void addFenZhiXiangOverlay() {
+
+        Drawable d = getResources().getDrawable(R.drawable.fenzhiixang2);
+        if(fenZhiXiangBeen!=null) {
+            for (SheBeiBean data : fenZhiXiangBeen) {
+                Point point  = new Point(Double.valueOf(data.getJingdu()), Double.valueOf(data.getWeidu()));
+                Point mapPoint = (Point) GeometryEngine
+                        .project(point, SpatialReference.create(4326), mapView
+                                .getSpatialReference());
+                PictureMarkerSymbol pictureMarkerSymbol = new PictureMarkerSymbol(d);
+                Map<String,Object> attrs= new HashMap<String, Object>();
+                attrs.put("id",data.getUuid());
+                attrs.put("sblx",data.getLx());
+                attrs.put("sbmc",data.getName());
+                Graphic gra = new Graphic(mapPoint, pictureMarkerSymbol,attrs);
+            }
+        }
+    }
 
 
     // 定位监听
