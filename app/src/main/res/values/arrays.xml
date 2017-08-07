@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    ßßß
+    <string-array name="week_days">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>c语言</item>
+        <item>java </item>
+        <item>php</item>
+        <item>xml</item>
+        <item>html</item>
+    </string-array>
+    <string-array name="jiingcaizhi">
+        <item>钢铁</item>
+        <item>水泥</item>
+        <item>树脂</item>
+        <item>复合</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="jigaixingzhuang">
+        <item>圆形</item>
+        <item>长方形</item>
+    </string-array>
+    <string-array name="gongneng">
+        <item>人井</item>
+        <item>工作井</item>
+        <item>虚拟井</item>
+    </string-array>
+    <string-array name="leixing">
+        <item>直通</item>
+        <item>转角</item>
+        <item>丁字</item>
+        <item>十字</item>
+        <item>转角</item>
+        <item>支接</item>
+        <item>异形</item>
+    </string-array>
+    <string-array name="jietoushulianag">
+        <item>数量</item>
+    </string-array>
+    <string-array name="fangwei">
+        <item>北</item>
+        <item>东</item>
+        <item>南</item>
+        <item>西</item>
+    </string-array>
+    <string-array name="duanmianxuhao">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="guankongleixing">
+        <item>穿孔电缆</item>
+        <item>直埋电缆</item>
+        <item>空排管</item>
+        <item>穿孔其他电缆</item>
+        <item>直埋其他电缆</item>
+        <item>通讯光缆</item>
+    </string-array>
+    <string-array name="guankongcaizhi">
+        <item>PVC</item>
+        <item>PE</item>
+        <item>波纹管</item>
+        <item>水泥管</item>
+        <item>钢管</item>
+        <item>铸铁</item>
+        <item>混合</item>
+        <item>未知</item>
+    </string-array>
+    <string-array name="guankongkongjing">
+        <item>200mm</item>
+        <item>150mm</item>
+        <item>100mm</item>
+        <item>50mm</item>
+    </string-array>
+    <string-array name="dainyadengji">
+        <item>10kv</item>
+        <item>20kv</item>
+        <item>35kv</item>
+        <item>110kv</item>
+        <item>220kv</item>
+    </string-array>
+    <string-array name="zhuangtai">
+        <item>在运</item>
+        <item>停运</item>
+    </string-array>
+
+    <string-array name="jingjiegouxingshi">
+        <item>单衬</item>
+        <item>双衬</item>
+        <item>方沟</item>
+        <item>盾构</item>
+        <item>砖混</item>
+        <item>拖拉管</item>
+        <item>顶管</item>
+    </string-array>
+
+    <string-array name="jingshuliang">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="guanjing">
+        <item>50mm</item>
+        <item>100mm</item>
+        <item>150mm</item>
+        <item>200mm</item>
+    </string-array>
+
+    <string-array name="caizhi">
+        <item>未知</item>
+        <item>水泥管</item>
+        <item>波纹管</item>
+        <item>混合</item>
+        <item>钢管</item>
+        <item>PVC</item>
+        <item>PE</item>
+    </string-array>
+
+    <string-array name="tongdaoleixing">
+        <item>排管</item>
+        <item>沟道</item>
+        <item>隧道</item>
+        <item>桥架</item>
+        <item>直埋</item>
+        <item>拖拉管</item>
+        <item>顶管</item>
+    </string-array>
+
+    <string-array name="suoshubiandianzhan">
+        <item>后期提供数据</item>
+    </string-array>
+
+    <string-array name="suoshuxianlu">
+        <item>后期提供数据</item>
+    </string-array>
+
+    <string-array name="dianlanxinghao">
+        <item>后期提供数据</item>
+    </string-array>
+
+
+    <string-array name="anzhuangweizhi">
+        <item>电缆井</item>
+        <item>电缆通道</item>
+    </string-array>
+
+    <string-array name="anzhuangweizhileixing">
+        <item>电缆井</item>
+        <item>电缆沟</item>
+        <item>直埋</item>
+        <item>隧道</item>
+        <item>桥架</item>
+    </string-array>
+
+
+    <string-array name="yinghuandengji">
+        <item>一般</item>
+        <item>次重</item>
+        <item>严重</item>
+    </string-array>
+
+
+    <string-array name="yinghuanleixing">
+        <item>电缆</item>
+        <item>中间接头</item>
+        <item>电缆井</item>
+        <item>通道</item>
+        <item>设备</item>
+    </string-array>
+
+</resources>

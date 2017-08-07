@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/title_item"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/toubu" >
+
+    <ImageView
+        android:id="@+id/title_back1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:onClick="Click"
+        android:padding="15dp"
+        android:src="@drawable/leftjt" />
+
+    <LinearLayout
+        android:id="@+id/top_center_text"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title_title"
+            style="@style/setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
+            android:text="标题"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/top_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/menuicon"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/camera"
+        android:background="@null"
+         />
+</RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/one" />
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_adress_quanmao"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="北京两路东129全貌"
+        android:textSize="15sp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+       >
+
+        <ImageView
+            android:id="@+id/img_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/picbtn" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-8dip"
+            android:padding="10dip"
+            android:src="@drawable/delete_bg"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>
+    <TextView
+        android:id="@+id/tv_adress_jingnei_quanmao"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:text="北京两路东129井内全貌"
+        android:gravity="center"
+    android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        >
+
+        <ImageView
+            android:id="@+id/img_image2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/picbtn" />
+
+        <ImageView
+            android:id="@+id/img_delete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-8dip"
+            android:padding="10dip"
+            android:src="@drawable/delete_bg"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_adress_bei"
+    android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+        android:gravity="center"
+    android:text="北京两路东129"
+    android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv_imagename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="北"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            >
+
+        <ImageView
+            android:id="@+id/img_image3"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/picbtn" />
+
+        <ImageView
+            android:id="@+id/img_delete3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-8dip"
+            android:padding="10dip"
+            android:src="@drawable/delete_bg"
+            android:visibility="gone" />
+            <ImageView
+                android:id="@+id/img_etid"
+                android:layout_toRightOf="@id/img_image3"
+                android:layout_alignTop="@id/img_image3"
+                android:layout_alignBottom="@id/img_image3"
+                android:layout_width="80dp"
+                android:layout_marginLeft="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/etid"
+                />
+    </RelativeLayout>
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_adress_dong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="北京两路东129"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv_imagenamedong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="东"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                >
+
+        <ImageView
+            android:id="@+id/img_image4"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/picbtn" />
+
+        <ImageView
+            android:id="@+id/img_delete4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-8dip"
+            android:padding="10dip"
+            android:src="@drawable/delete_bg"
+            android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/img_dongetid"
+                    android:layout_toRightOf="@id/img_image4"
+                    android:layout_alignTop="@id/img_image4"
+                    android:layout_alignBottom="@id/img_image4"
+                    android:layout_width="80dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/etid"
+                    />
+    </RelativeLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_adress_nan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="北京两路东129"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv_imagenamenan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="南"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/img_image5"
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/picbtn" />
+
+                <ImageView
+                    android:id="@+id/img_delete5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="-8dip"
+                    android:padding="10dip"
+                    android:src="@drawable/delete_bg"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_nanetid"
+                    android:layout_toRightOf="@id/img_image5"
+                    android:layout_alignTop="@id/img_image5"
+                    android:layout_alignBottom="@id/img_image5"
+                    android:layout_width="80dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/etid"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_adress_xi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="北京两路东129"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv_imagenamexi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="西"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/img_image6"
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/picbtn" />
+
+                <ImageView
+                    android:id="@+id/img_textetid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="-8dip"
+                    android:padding="10dip"
+                    android:src="@drawable/delete_bg"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_xietid"
+                    android:layout_toRightOf="@id/img_image6"
+                    android:layout_alignTop="@id/img_image6"
+                    android:layout_alignBottom="@id/img_image6"
+                    android:layout_width="80dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/etid"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/btn_up"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完成"
+            android:textSize="20sp"
+            android:textColor="@color/blue_text2"/>
+</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

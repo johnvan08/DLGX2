@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/il"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/title_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:onClick="Click"
+            android:padding="15dp"
+            android:src="@drawable/leftjt" />
+
+        <LinearLayout
+            android:id="@+id/top_center_text"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/title_title"
+                style="@style/setting_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="12"
+                android:text="标题"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/top_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/menuicon"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/quit"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/il"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<GridView
+    android:layout_centerInParent="true"
+    android:id="@+id/gv"
+    android:layout_width="wrap_content"
+    android:padding="20dp"
+    android:layout_height="wrap_content">
+</GridView>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="完成"/>
+</RelativeLayout>

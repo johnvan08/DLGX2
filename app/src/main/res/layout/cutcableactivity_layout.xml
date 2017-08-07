@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--<include layout="@layout/title_items"/>-->
+    <RadioGroup
+        android:id="@+id/main_rg_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <RadioButton
+            android:id="@+id/tab_rb_a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/seller6"
+            android:background="@drawable/xx_01"
+            android:text="电缆段信息表" />
+        <RadioButton
+            android:id="@+id/tab_rb_b"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/xx_02"
+            android:text="未完成"
+            android:textSize="18sp"
+            android:checked="false" />
+    </RadioGroup>
+    <FrameLayout
+        android:id="@+id/tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+</LinearLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/il"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/title_back1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:onClick="Click"
+                    android:padding="15dp"
+                    android:src="@drawable/leftjt" />
+
+                <LinearLayout
+                    android:id="@+id/top_center_text"
+                    android:layout_width="wrap_content"
+                    android:padding="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/title_title"
+                        style="@style/setting_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="12"
+                        android:text="标题"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/top_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/menuicon"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/quit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+
+
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@id/il"
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:background="@color/one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="断面名称"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="18sp" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/shuxian" />
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="不知道"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@color/two"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="电缆段现场编号"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="18sp" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/shuxian" />
+                    <EditText
+                        android:id="@+id/et_shurunummber"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="必填字段"
+                        android:background="@null"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+                    <ListView
+                        android:id="@+id/lv_jiansuo"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/list_bg"
+                        android:visibility="gone"
+                        />
+
+                <LinearLayout
+                    android:background="@color/there"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="管孔类型"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="18sp" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/shuxian" />
+                    <LinearLayout
+                        android:background="@color/there"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/guankongleixing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textSize="18sp" />
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:entries="@array/guankongleixing"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@color/two"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="管孔材质"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="18sp" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/shuxian" />
+                    <LinearLayout
+                        android:background="@color/two"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/guankongcaizhi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textSize="18sp" />
+                        <Spinner
+                            android:id="@+id/spinner2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:entries="@array/guankongcaizhi"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@color/two"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="管孔管径"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="18sp" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/shuxian" />
+                    <LinearLayout
+                        android:background="@color/two"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/guankongkongjing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textSize="18sp" />
+                        <Spinner
+                            android:id="@+id/spinner3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:entries="@array/guankongkongjing"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:background="@color/shuxian"
+                android:layout_toLeftOf="@id/ll"
+                android:layout_alignTop="@id/ll"
+                android:layout_alignBottom="@id/ll"/>
+            <View
+                android:id="@+id/view_di"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/shuxian"
+                android:layout_below="@id/ll"
+                android:layout_alignLeft="@id/ll"
+                android:layout_alignRight="@id/ll"
+                />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:background="@color/shuxian"
+                android:layout_toRightOf="@id/ll"
+                android:layout_alignTop="@id/ll"
+                android:layout_alignBottom="@id/ll"/>
+
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textSize="18sp" />
+</RelativeLayout>

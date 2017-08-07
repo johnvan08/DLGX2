@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0396A6"
+    android:padding="15dp" >
+    <ImageView
+           android:id="@+id/imageview1"
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:background="#00ffffff"
+           android:scaleType="center"
+           android:layout_gravity="center"
+           android:src="@drawable/ic_gx1" />
+    <TextView
+        android:layout_below="@+id/imageview1"
+        android:layout_marginTop="30dp"
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ffffff"
+        android:gravity="center"
+        android:text="外业数据采集系统"
+        android:textColor="@color/colorWhite"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/user_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorWhite"
+         >
+
+        <TextView
+            android:id="@+id/line_gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/line_gray" />
+
+        <EditText
+            android:id="@+id/ed_phone"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入账号"
+            android:maxLength="11"
+            android:text=""
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/ed_psw"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_gray"
+            android:layout_marginTop="60dp"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:text=""
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <!--<TextView-->
+        <!--android:layout_below="@+id/user_edit_text"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:id="@+id/login_btn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/ic_login_btn"-->
+        <!--android:gravity="center"-->
+        <!--android:text="登        录"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:textSize="18sp" />-->
+    <Button
+        android:id="@+id/button_first"
+        android:layout_below="@+id/user_edit_text"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:radius="15dip"
+        android:gravity="center"
+        android:background="@drawable/shape"
+        android:textColor="@color/colorWhite"
+        android:text="登     录"
+        >
+    </Button>
+    <TextView
+            android:id="@+id/tv_nowRegister"
+          android:layout_alignLeft="@id/button_first"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/button_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即注册"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_forgetPassword"
+            android:layout_alignRight="@id/button_first"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/button_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+</RelativeLayout>
