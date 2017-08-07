@@ -75,7 +75,7 @@ import dlgx.gis.com.dlgx.beans.YanMaiJingMap;
 import dlgx.gis.com.dlgx.db.DatabaseAdapter;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+///ddefdfe
     @Bind(R.id.map)
     MapView map;
     @Bind(R.id.del)
