@@ -6,66 +6,72 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".activitys.MainActivity">
-
-    <android.support.design.widget.AppBarLayout
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".activitys.MainActivity">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorWhite"
-            app:popupTheme="@style/AppTheme.PopupOverlay" >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center"
-                android:text="外业数据采集系统"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorWhite"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:text="外业数据采集系统"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </android.support.v7.widget.Toolbar>
 
-    </android.support.design.widget.AppBarLayout>
-    <include layout="@layout/content_main"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_main" />
+
         <LinearLayout
             android:id="@+id/ll"
-            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:background="@color/toubu"
+            android:layout_alignParentBottom="true"
             android:layout_gravity="bottom|end"
+            android:background="@color/toubu"
             android:orientation="vertical">
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/line_gray" />
+
             <LinearLayout
                 android:id="@+id/main_rg_tabs"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="horizontal">
+
                 <ImageButton
                     android:id="@+id/tab_rb_a"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@null"
+                    android:gravity="center"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_jinglv1"
+                    android:src="@drawable/jinglu1"
 
                     />
 
@@ -74,48 +80,52 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@null"
+                    android:gravity="center"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_tongdaohong"/>
+                    android:src="@drawable/tongdaohong" />
+
                 <ImageButton
                     android:id="@+id/tab_rb_c"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@null"
+                    android:gravity="center"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_dianlan"/>
+                    android:src="@drawable/duanlan" />
+
                 <ImageButton
                     android:id="@+id/tab_rb_d"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@null"
+                    android:gravity="center"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_shebeilv" />
+                    android:src="@drawable/shbeilu" />
             </LinearLayout>
         </LinearLayout>
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|bottom"
-        android:layout_marginBottom="@dimen/fab_margin_bottom"
-        android:layout_marginLeft="@dimen/fab_margin_left"
-        android:src="@drawable/ic_dw64" />
 
-</android.support.design.widget.CoordinatorLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="@dimen/fab_margin_bottom"
+            android:layout_marginLeft="@dimen/fab_margin_left"
+            android:src="@drawable/dingweizhi"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!-- 这是右侧的部分 -->
     <LinearLayout
         android:id="@+id/right"
         android:layout_width="250dp"
         android:layout_height="match_parent"
-        android:layout_gravity="end"
+        android:layout_gravity="right"
         android:orientation="vertical"
-        android:background="@color/colorWhite"
-        android:clickable="true">
+        android:background="@color/white">
         <LinearLayout
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
@@ -130,7 +140,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:background="@null"
-                android:src="@drawable/ic_weixing"
+                android:src="@drawable/weixing"
                 />
             <ImageButton
                 android:layout_marginLeft="15dp"
@@ -141,8 +151,575 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:background="@null"
-                android:src="@drawable/ic_pingmiantu"
+                android:src="@drawable/pingmiantu"
                 />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:text="卫星地图" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:text="2D平面图" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/layout_lixinxiazai"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lixianditu"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:text="离线地图" />
+            <ImageView
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rightjt"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:background="@color/line_gray"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:text="筛选" />
+            <TextView
+                android:id="@+id/esrimapbtn"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="进入esri地图"
+                android:textColor="@color/colorPrimary"
+                />
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="确定"
+                android:textColor="@color/colorPrimary"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:id="@+id/dispatch_item_select_user_name"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="电缆井"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/dispatch_item_select_user_ckb"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="电缆通道"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_tongdao"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="电缆段"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_dianlanduan"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="设备"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_shebei"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="拐点"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_guaidain"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="分支箱"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_fenzhixiang"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="环网柜"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_huangwanggui"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="箱变"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_xiangbian"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="配电室"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_peidianshi"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="变压器"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_bianyaqi"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="杆塔"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_ganta"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="变电站"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_biandianzhan"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="开关站"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_kaiguanzhan"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" android:weightSum="10">
+                    <TextView
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dip"
+                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="掩埋井"
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:background="@drawable/checkbox_selector"
+                            android:id="@+id/cb_yanmaijing"
+                            android:focusable="false"
+                            android:button="@null"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            >
+                        </CheckBox>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <!--<ListView-->
+        <!--android:id="@+id/listview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="gone"></ListView>-->
     </LinearLayout>
 </android.support.v4.widget.DrawerLayout>
